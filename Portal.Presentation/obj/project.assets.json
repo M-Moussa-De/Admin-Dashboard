@@ -1,0 +1,112 @@
+{
+  "version": 3,
+  "targets": {
+    "net7.0": {
+      "Portal.Business/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Portal.Infrastructure": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Portal.Business.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Portal.Business.dll": {}
+        }
+      },
+      "Portal.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Portal.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Portal.Infrastructure.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Portal.Business/1.0.0": {
+      "type": "project",
+      "path": "../Portal.Business/Portal.Business.csproj",
+      "msbuildProject": "../Portal.Business/Portal.Business.csproj"
+    },
+    "Portal.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../Portal.Infrastructure/Portal.Infrastructure.csproj",
+      "msbuildProject": "../Portal.Infrastructure/Portal.Infrastructure.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net7.0": [
+      "Portal.Business >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\mmous\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\mmous\\source\\Repos\\AdminDashboard\\Portal.Presentation\\Portal.Presentation.csproj",
+      "projectName": "Portal.Presentation",
+      "projectPath": "C:\\Users\\mmous\\source\\Repos\\AdminDashboard\\Portal.Presentation\\Portal.Presentation.csproj",
+      "packagesPath": "C:\\Users\\mmous\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\mmous\\source\\Repos\\AdminDashboard\\Portal.Presentation\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\mmous\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net7.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "projectReferences": {
+            "C:\\Users\\mmous\\source\\Repos\\AdminDashboard\\Portal.Business\\Portal.Business.csproj": {
+              "projectPath": "C:\\Users\\mmous\\source\\Repos\\AdminDashboard\\Portal.Business\\Portal.Business.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net7.0": {
+        "targetAlias": "net7.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
