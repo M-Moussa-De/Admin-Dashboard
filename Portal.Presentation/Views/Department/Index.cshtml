@@ -1,4 +1,6 @@
-﻿@{
+﻿@model IEnumerable<DepartmentVM>
+
+@{
     ViewBag.Title = "Departments";
 }
 
@@ -31,17 +33,17 @@
                 <tr>
                     <th>ID</th>
                     <th>Name</th>
-                    <th>Salary</th>
+                    <th>Code</th>
                 </tr>
             </thead>
 
             <tbody>
-                @foreach (var emp in Model)
+                @foreach (var dep in Model)
                 {
                     <tr>
-                        <td>@emp.Id</td>
-                        <td>@emp.Name</td>
-                        <td>@emp.Salary</td>
+                        <td>@dep.Id</td>
+                        <td>@dep.Name</td>
+                        <td>@dep.Code</td>
                     </tr>
                 }
             </tbody>
