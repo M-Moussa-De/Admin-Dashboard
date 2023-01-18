@@ -1,52 +1,63 @@
 ﻿@model IEnumerable<DepartmentVM>
 
 @{
-    ViewBag.Title = "Departments";
+	ViewBag.Title = "Departments";
 }
 
 <!-- Content Header (Page header) -->
 <div class="content-header">
-    <div class="container-fluid">
-        <div class="row mb-2">
-            <div class="col-sm-6">
-                <h1 class="m-0">Departments</h1>
-            </div>
-            <!-- /.col -->
-            <div class="col-sm-6">
-                <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="#">Departments</a></li>
-                    <li class="breadcrumb-item active">Department card</li>
-                </ol>
-            </div>
-            <!-- /.col -->
-        </div>
-        <!-- /.row -->
-    </div>
-    <!-- /.container-fluid -->
+	<div class="container-fluid">
+		<div class="row mb-2">
+			<div class="col-sm-6">
+				<h1 class="m-0">Departments</h1>
+			</div>
+			<!-- /.col -->
+			<div class="col-sm-6">
+				<ol class="breadcrumb float-sm-right">
+					<li class="breadcrumb-item"><a asp-controller="department" asp-action="index">Departments</a></li>
+					<li class="breadcrumb-item active">Center</li>
+				</ol>
+			</div>
+			<!-- /.col -->
+		</div>
+		<!-- /.row -->
+		<!-- Add a new department-->
+		<div class="mt-3">
+			<a asp-asp-controller="department" asp-action="new" class="btn btn-sm btn-primary">Add a new department</a>
+		</div>
+		<!-- / . add a new department-->
+	</div>
+	<!-- /.container-fluid -->
 </div>
 <!-- /.content-header -->
 
 <section class="content">
-    <div class="container-fluid">
-        <table class="table table-hover table-bordered table-striped text-center font-weight-bold">
-            <thead class="thead-dark">
-                <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Code</th>
-                </tr>
-            </thead>
+	<div class="container-fluid">
+		<table class="table table-hover table-bordered table-striped text-center font-weight-bold">
+			<thead class="thead-dark">
+				<tr>
+					<th>ID</th>
+					<th>Name</th>
+					<th>Code</th>
+					<th class="w-25">Actions</th>
+				</tr>
+			</thead>
 
-            <tbody>
-                @foreach (var dep in Model)
-                {
-                    <tr>
-                        <td>@dep.Id</td>
-                        <td>@dep.Name</td>
-                        <td>@dep.Code</td>
-                    </tr>
-                }
-            </tbody>
-        </table>
-    </div>
+			<tbody>
+				@foreach (var dep in Model)
+				{
+					<tr>
+						<td>@dep.Id</td>
+						<td>@dep.Name</td>
+						<td>@dep.Code</td>
+						<td class="d-flex flex-wrap justify-content-center">
+							<a asp-controller="department" asp-action="edit" asp-route-id="@dep.Id" class="btn btn-sm btn-success">Edit</a>
+							<a asp-controller="department" asp-action="show" asp-route-id="@dep.Id" class="btn btn-sm btn-info mx-2 my-2 my-md-0">Show</a>
+							<a asp-controller="department" asp-action="delete" asp-route-id="@dep.Id" class="btn btn-sm btn-danger">Delete</a>
+						</td>
+					</tr>
+				}
+			</tbody>
+		</table>
+	</div>
 </section>

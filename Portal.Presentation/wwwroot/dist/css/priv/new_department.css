@@ -1,0 +1,25 @@
+﻿#new_department_form {
+    position: relative;
+    height: 100vh;
+}
+
+#new_department_form section.row {
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    transform: translate(-50%, -8%);
+}
+
+#new_department_form section.row .card {
+    /*margin: 0 auto;*/
+    width: 90vw;
+}
+@media (min-width: 768px) {
+    #new_department_form section.row .card {
+        width: 40rem;
+    }
+}
+#new_department_form section.row .card .card-title {
+    float: none;
+    text-align: center;
+}

@@ -1,0 +1,69 @@
+﻿@model DepartmentVM
+@{
+	ViewData["Title"] = "Show";
+}
+
+<!-- Content Header (Page header) -->
+<div class="content-header">
+	<div class="container-fluid">
+		<div class="row mb-2">
+			<div class="col-sm-6">
+				<h1 class="m-0">Departments</h1>
+			</div>
+			<!-- /.col -->
+			<div class="col-sm-6">
+				<ol class="breadcrumb float-sm-right">
+					<li class="breadcrumb-item"><a asp-asp-controller="department" asp-action="index">Departments</a></li>
+					<li class="breadcrumb-item active">Show</li>
+				</ol>
+			</div>
+			<!-- /.col -->
+		</div>
+		<!-- /.row -->
+	</div>
+	<!-- /.container-fluid -->
+</div>
+<!-- /.content-header -->
+
+
+<section class="content" id="new_department_form">
+	<div class="container-fluid">
+		<section class="row">
+			<!-- left column -->
+			<div class="col-md-6">
+				<!-- general form elements -->
+				<div class="card card-primary">
+					<div class="card-header bg-dark">
+						<h3 class="card-title"><strong>@Model.Name</strong></h3>
+					</div>
+					<!-- /.card-header -->
+					<div class="card-body">
+						<div class="form-group">
+							<label>Department id</label>
+							<input type="text" class="form-control" disabled value="@Model.Id">
+							</di>
+							<div class="form-group">
+								<label>Department name</label>
+								<input type="text" class="form-control" disabled value="@Model.Name">
+							</div>
+							<div class="form-group">
+								<label>Department code</label>
+								<input type="text" class="form-control" disabled value="@Model.Code">
+							</div>
+						</div>
+						<!-- /.card-body -->
+
+						<div class="card-footer d-flex justify-content-end bg-dark rounded-top-0 rounded-bottom">
+							<a asp-controller="department" asp-action="edit" class="btn btn-sm bg-primary mx-1">Edit</a>
+							<a asp-controller="department" asp-action="delete" class="btn btn-sm bg-danger mx-1">Delete</a>
+						</div>
+					</div>
+					<!-- /.card -->
+				</div>
+		</section>
+		<!-- /.row-->
+
+	</div>
+	<!-- /.container-fluid -->
+</section>
+

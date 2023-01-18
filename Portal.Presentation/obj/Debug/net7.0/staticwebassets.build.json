@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "xKqaPhU/wKZSnIcV8JZkKkhjNfr4xFVC/2YztuN4cWw=",
+  "Hash": "w88fD/hBwnRwPTcNJF7v1hDGoEKrpM/gJner+zM9vCo=",
   "Source": "Portal.Presentation",
   "BasePath": "_content/Portal.Presentation",
   "Mode": "Default",
@@ -508,6 +508,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\dist\\css\\onicons.min.css"
+    },
+    {
+      "Identity": "C:\\Users\\mmous\\source\\Repos\\AdminDashboard\\Portal.Presentation\\wwwroot\\dist\\css\\priv\\new_department.css",
+      "SourceId": "Portal.Presentation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mmous\\source\\Repos\\AdminDashboard\\Portal.Presentation\\wwwroot\\",
+      "BasePath": "_content/Portal.Presentation",
+      "RelativePath": "dist/css/priv/new_department.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\dist\\css\\priv\\new_department.css"
     },
     {
       "Identity": "C:\\Users\\mmous\\source\\Repos\\AdminDashboard\\Portal.Presentation\\wwwroot\\dist\\img\\AdminLTELogo.png",
@@ -23900,6 +23917,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\plugins\\jszip\\jszip.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\mmous\\source\\Repos\\AdminDashboard\\Portal.Presentation\\wwwroot\\plugins\\justvalidate\\justvalidate.min.js",
+      "SourceId": "Portal.Presentation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mmous\\source\\Repos\\AdminDashboard\\Portal.Presentation\\wwwroot\\",
+      "BasePath": "_content/Portal.Presentation",
+      "RelativePath": "plugins/justvalidate/justvalidate.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\plugins\\justvalidate\\justvalidate.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\mmous\\source\\Repos\\AdminDashboard\\Portal.Presentation\\wwwroot\\plugins\\justvalidate\\justvalidate_new_dep.js",
+      "SourceId": "Portal.Presentation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mmous\\source\\Repos\\AdminDashboard\\Portal.Presentation\\wwwroot\\",
+      "BasePath": "_content/Portal.Presentation",
+      "RelativePath": "plugins/justvalidate/justvalidate_new_dep.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\plugins\\justvalidate\\justvalidate_new_dep.js"
     },
     {
       "Identity": "C:\\Users\\mmous\\source\\Repos\\AdminDashboard\\Portal.Presentation\\wwwroot\\plugins\\moment\\locale\\af.js",

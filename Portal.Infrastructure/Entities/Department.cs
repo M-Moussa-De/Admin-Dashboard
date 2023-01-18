@@ -11,10 +11,10 @@ namespace Portal.Infrastructure.Entities
         [Key]
         public int Id { get; set; }
 
-        [Required, MaxLength(50)]
+        [Required, MaxLength(60)]
         public string Name { get; set; }
 
-        [Required, MaxLength(50)]
+        [Required, MaxLength(60)]
         public string Code { get; set; }
     }
 }
