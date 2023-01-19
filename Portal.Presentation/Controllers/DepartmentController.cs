@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Portal.Business.Models;
 using Portal.Business.Repository;
 
@@ -56,33 +55,63 @@ namespace Portal.Presentation.Controllers
 		}
 
 		[HttpGet]
-		public IActionResult Edit()
+		public async Task<IActionResult> Edit(int id)
 		{
-			return View();
+			var dep = await repo.GetByIdAsync(id);
+
+			return View(dep);
 		}
 
-		//[HttpPost]
-		//public async Task<IActionResult> Edit(int id)
-		//{
-		//	var dep = repo.GetByIdAsync(id);
-
-		//	if (dep == null)
-		//	{
-		//		return RedirectToAction("Index", "NotFound");
-		//	}
-
-
-
-		//	await repo.EditAsync(dep);
-		//}
-
-		[Route("api/[controller]")]
-		[HttpGet("{depname}")]
-		public async Task DepName(string name)
+		[HttpPost]
+		public async Task<IActionResult> Edit(DepartmentVM model)
 		{
-			return await repo.FindAsync(name);
+			try
+			{
+				//Validation checking
+				if (!ModelState.IsValid)
+				{
+					return View(model);
+				}
+
+				await repo.EditAsync(model);
+
+			}
+			catch (Exception ex)
+			{
+				TempData["Error"] = "Error occured while saving the data into DB";
+			}
+
+			return RedirectToAction("Index", "Department");
 		}
 
+		[HttpGet]
+		public async Task<IActionResult> Delete(int id)
+		{
+			var dep = await repo.GetByIdAsync(id);
 
+			return View(dep);
+		}
+
+		[HttpPost]
+		public async Task<IActionResult> Delete(DepartmentVM model)
+		{
+			try
+			{
+				//Validation checking
+				if (!ModelState.IsValid)
+				{
+					return View(model);
+				}
+
+				await repo.DeleteAsync(model);
+
+			}
+			catch (Exception ex)
+			{
+				TempData["Error"] = "Error occured while processing the request";
+			}
+
+			return RedirectToAction("Index", "Department");
+		}
 	}
 }

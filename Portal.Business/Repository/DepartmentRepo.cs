@@ -61,7 +61,6 @@ namespace Portal.Business.Repository
 				oldData.Name = obj.Name;
 				oldData.Code = obj.Code;
 				await db.SaveChangesAsync();
-
 			}
 		}
 

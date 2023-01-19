@@ -51,9 +51,15 @@
 						<td>@dep.Name</td>
 						<td>@dep.Code</td>
 						<td class="d-flex flex-wrap justify-content-center">
-							<a asp-controller="department" asp-action="edit" asp-route-id="@dep.Id" class="btn btn-sm btn-success">Edit</a>
-							<a asp-controller="department" asp-action="show" asp-route-id="@dep.Id" class="btn btn-sm btn-info mx-2 my-2 my-md-0">Show</a>
-							<a asp-controller="department" asp-action="delete" asp-route-id="@dep.Id" class="btn btn-sm btn-danger">Delete</a>
+							<a asp-controller="department" asp-action="edit" asp-route-id="@dep.Id" class="btn btn-sm btn-secondary">
+								<i class='fa fa-edit'></i> Edit
+							</a>
+							<a asp-controller="department" asp-action="show" asp-route-id="@dep.Id" class="btn btn-sm btn-info mx-2 my-2 my-md-0">
+								<i class='fa fa-play'></i> Show
+							</a>
+							<a asp-controller="department" asp-action="delete" asp-route-id="@dep.Id" class="btn btn-sm btn-danger">
+								<i class="fa fa-trash"></i> Delete
+							</a>
 						</td>
 					</tr>
 				}

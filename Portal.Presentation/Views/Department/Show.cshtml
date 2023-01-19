@@ -1,6 +1,6 @@
 ﻿@model DepartmentVM
 @{
-	ViewData["Title"] = "Show";
+	ViewData["Title"] = Model.Name;
 }
 
 <!-- Content Header (Page header) -->
@@ -39,27 +39,29 @@
 					<!-- /.card-header -->
 					<div class="card-body">
 						<div class="form-group">
-							<label>Department id</label>
-							<input type="text" class="form-control" disabled value="@Model.Id">
-							</di>
-							<div class="form-group">
-								<label>Department name</label>
-								<input type="text" class="form-control" disabled value="@Model.Name">
-							</div>
-							<div class="form-group">
-								<label>Department code</label>
-								<input type="text" class="form-control" disabled value="@Model.Code">
-							</div>
+							<label>Department name</label>
+							<input type="text" class="form-control" disabled readonly value="@Model.Name">
 						</div>
-						<!-- /.card-body -->
-
-						<div class="card-footer d-flex justify-content-end bg-dark rounded-top-0 rounded-bottom">
-							<a asp-controller="department" asp-action="edit" class="btn btn-sm bg-primary mx-1">Edit</a>
-							<a asp-controller="department" asp-action="delete" class="btn btn-sm bg-danger mx-1">Delete</a>
+						<div class="form-group">
+							<label>Department code</label>
+							<input type="text" class="form-control" disabled readonly value="@Model.Code">
 						</div>
 					</div>
-					<!-- /.card -->
+					<!-- /.card-body -->
+
+					<div class="card-footer bg-white">
+						<div class="row">
+							<div class="col-6">
+								<a asp-controller="department" asp-action="edit" asp-route-id="@Model.Id" class="btn btn-sm btn-primary d-block">Edit</a>
+							</div>
+							<div class="col-6">
+								<a asp-controller="department" asp-action="delete" asp-route-id="@Model.Id" class="btn btn-sm btn-danger d-block">Delete</a>
+							</div>
+						</div>
+					</div>
 				</div>
+				<!-- /.card -->
+			</div>
 		</section>
 		<!-- /.row-->
 

@@ -42,7 +42,7 @@ validator
         },
         {
             validator: (value) => () => {
-                return fetch(`http://localhost:5001/department?depcode=${encodeURIComponent(value)}`)
+                return fetch(`http://localhost:5001/department/?depcode=${encodeURIComponent(value)}`)
                     .then(function (res) {
                         return res.json()
                     })
